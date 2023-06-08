@@ -77,15 +77,15 @@ typedef struct tagStack{
 }Stack;
 
 //thread
-typedef struct threadTree {
+typedef struct threadTreeNode {
     DirectoryTree *threadTree;
-    DirectoryTree *fileName;
+    DirectoryTree *fName;
     char *cmd;
     char *usrName;
     char *content;
     int mode;
     int option;
-} ThreadTree;
+} ThreadNode;
 
 time_t ltime;
 struct tm *today;
@@ -149,6 +149,8 @@ void ls(DirectoryTree* dirTree);
 void ls_a(DirectoryTree* dirTree);
 void ls_l(DirectoryTree* dirTree);
 void ls_al(DirectoryTree* dirTree);
+char *get_UID(TreeNode *dirNode);
+char *get_GID(TreeNode *dirNode);
 
 //cat
 int Concatenate(DirectoryTree* dirTree, char* fName, int type);

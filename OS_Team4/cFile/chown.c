@@ -58,7 +58,7 @@ int ChangeOwner(DirectoryTree* dirTree, char* userName, char* dirName, int flag)
 int chown_(DirectoryTree* dirTree, char* cmd)
 {
     TreeNode* tmpNode = NULL;
-    ThreadTree threadTree[MAX_THREAD];
+    ThreadNode threadTree[MAX_THREAD];
     pthread_t threadPool[MAX_THREAD];
     char tmp[MAX_NAME];
     int count = 0;

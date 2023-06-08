@@ -6,7 +6,7 @@ int grep(DirectoryTree* dirTree, char* cmd)        //완료
     TreeNode* tmpNode = NULL;
     TreeNode* tmpNode2 = NULL;
     pthread_t threadPool[MAX_THREAD];
-    ThreadTree threadTree[MAX_THREAD];
+    ThreadNode threadTree[MAX_THREAD];
 
     int count = 0;
     char* str;
@@ -25,6 +25,11 @@ int grep(DirectoryTree* dirTree, char* cmd)        //완료
     if(cmd[0] == '-'){
         if(strcmp(cmd, "-n")== 0){
             str = strtok(NULL, " ");
+            if (str == NULL) {
+                printf("grep: Invalid option\n");
+                printf("Try 'grep --help' for more information.\n");
+                return -1;
+            }
             strncpy(userContent, str, MAX_BUFFER);
             str = strtok(NULL, " ");
             if (str == NULL) {
@@ -42,6 +47,11 @@ int grep(DirectoryTree* dirTree, char* cmd)        //완료
         }
         else if(strcmp(cmd, "-v")== 0){
             str = strtok(NULL, " ");
+            if (str == NULL) {
+                printf("grep: Invalid option\n");
+                printf("Try 'grep --help' for more information.\n");
+                return -1;
+            }
             strncpy(userContent, str, MAX_BUFFER);
             str = strtok(NULL, " ");
             if (str == NULL) {
@@ -59,6 +69,11 @@ int grep(DirectoryTree* dirTree, char* cmd)        //완료
         }
         else if(strcmp(cmd, "-i")== 0){
             str = strtok(NULL, " ");
+            if (str == NULL) {
+                printf("grep: Invalid option\n");
+                printf("Try 'grep --help' for more information.\n");
+                return -1;
+            }
             strncpy(userContent, str, MAX_BUFFER);
             str = strtok(NULL, " ");
             if (str == NULL) {
@@ -76,6 +91,11 @@ int grep(DirectoryTree* dirTree, char* cmd)        //완료
         }
         else if(strcmp(cmd, "-nv")== 0 || strcmp(cmd, "-vn") == 0){
             str = strtok(NULL, " ");
+            if (str == NULL) {
+                printf("grep: Invalid option\n");
+                printf("Try 'grep --help' for more information.\n");
+                return -1;
+            }
             strncpy(userContent, str, MAX_BUFFER);
             str = strtok(NULL, " ");
             if (str == NULL) {
@@ -93,6 +113,11 @@ int grep(DirectoryTree* dirTree, char* cmd)        //완료
         }
         else if(strcmp(cmd, "-ni")== 0 || strcmp(cmd, "-in") == 0){
             str = strtok(NULL, " ");
+            if (str == NULL) {
+                printf("grep: Invalid option\n");
+                printf("Try 'grep --help' for more information.\n");
+                return -1;
+            }
             strncpy(userContent, str, MAX_BUFFER);
             str = strtok(NULL, " ");
             if (str == NULL) {
@@ -110,6 +135,11 @@ int grep(DirectoryTree* dirTree, char* cmd)        //완료
         }
         else if(strcmp(cmd, "-vi")== 0 || strcmp(cmd, "-iv") == 0){
             str = strtok(NULL, " ");
+            if (str == NULL) {
+                printf("grep: Invalid option\n");
+                printf("Try 'grep --help' for more information.\n");
+                return -1;
+            }
             strncpy(userContent, str, MAX_BUFFER);
             str = strtok(NULL, " ");
             if (str == NULL) {
@@ -127,6 +157,11 @@ int grep(DirectoryTree* dirTree, char* cmd)        //완료
         }
         else if(strcmp(cmd, "-inv")== 0 || strcmp(cmd, "-ivn") == 0 || strcmp(cmd, "-niv") == 0 || strcmp(cmd, "-nvi") == 0 || strcmp(cmd, "-vin") == 0 || strcmp(cmd, "-vni") == 0){
             str = strtok(NULL, " ");
+            if (str == NULL) {
+                printf("grep: Invalid option\n");
+                printf("Try 'grep --help' for more information.\n");
+                return -1;
+            }
             strncpy(userContent, str, MAX_BUFFER);
             str = strtok(NULL, " ");
             if (str == NULL) {

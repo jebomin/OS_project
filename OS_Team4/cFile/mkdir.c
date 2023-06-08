@@ -85,7 +85,7 @@ int Mkdir(DirectoryTree* dirTree, char* cmd)
     }
     
     pthread_t threadPool[MAX_THREAD];
-    ThreadTree threadTree[MAX_THREAD];
+    ThreadNode threadTree[MAX_THREAD];
     tmpNode = dirTree->current;
 
     if (cmd[0] == '-') {

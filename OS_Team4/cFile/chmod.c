@@ -35,7 +35,7 @@ int ChangeMode(DirectoryTree* dirTree, int mode, char* dirName)
 int chmod_(DirectoryTree* dirTree, char* cmd)
 {
     TreeNode* tmpNode = NULL;
-    ThreadTree threadTree[MAX_THREAD];
+    ThreadNode threadTree[MAX_THREAD];
     pthread_t threadPool[MAX_THREAD];
     int count = 0;
     char* str;

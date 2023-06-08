@@ -8,7 +8,6 @@ int main()
     dStack = InitializeStack();
 
     Login(usrList, Linux);
-    //PrintStart();
     SaveUserList(usrList);
 
     while(1){

@@ -16,6 +16,7 @@ void Instruction(DirectoryTree* dirTree, char* cmd)
         return;
     }
     str = strtok(cmd, " ");
+    
 //cmd를 띄어쓰기 기준으로 나눠줌
     if(strcmp(str, "mkdir") == 0){
         str = strtok(NULL, " ");
@@ -92,7 +93,7 @@ void Instruction(DirectoryTree* dirTree, char* cmd)
             grep(dirTree, str);
          }
     else{
-        printf("'%s': 명령을 찾을 수 없습니다\n", cmd);
+        printf("command not found : %s \n", cmd);
     }
     return;
 }

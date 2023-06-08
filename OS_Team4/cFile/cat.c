@@ -5,7 +5,7 @@ int cat(DirectoryTree* dirTree, char* cmd)
     TreeNode* currentNode = NULL;
     TreeNode* tmpNode = NULL;
     TreeNode* tmpNode2 = NULL;
-    ThreadTree threadTree[MAX_THREAD];
+    ThreadNode threadTree[MAX_THREAD];
     pthread_t threadPool[MAX_THREAD];
     int count = 0;
     char* str;
@@ -84,8 +84,16 @@ int cat(DirectoryTree* dirTree, char* cmd)
         if (!strcmp(cmd, "-n")) {
             str = strtok(NULL, " ");
             if (!str) {
-                printf("cat: Invalid option\n");
-                printf("Try 'cat --help' for more information.\n");
+               char *buf = NULL;
+                int lineCount = 1;
+                size_t inputSize = 0;
+                ssize_t readSize;
+
+                while ((readSize = getline(&buf, &inputSize, stdin)) != -1) {
+                printf("%6d  %s", lineCount++, buf);
+            }
+                rewind(stdin);
+                free(buf);
                 return -1;
             }
             while (str) {
