@@ -1,4 +1,4 @@
-# OS_teamproject
+# OS_project
 2023 운영체제 프로젝트
 
 ### 📌소개
