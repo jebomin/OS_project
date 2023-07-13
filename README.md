@@ -1,7 +1,7 @@
-# OS_project
+# 📝 OS_project
 2023 운영체제 프로젝트
 
-### 📌소개
+### 📌 소개
 AWS환경에서의 Mini Operating System 구현<br/>
 
 
