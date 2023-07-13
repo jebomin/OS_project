@@ -9,7 +9,7 @@ AWS환경에서의 Mini Operating System 구현<br/>
 - 2023.05.01~2023.06.07
 
 ### ⚙ 기술 스택
-<img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=C&logoColor=white"><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=Linux&logoColor=white"><img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=AMAZONAWS&logoColor=white">
+<img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=C&logoColor=white"><img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=Linux&logoColor=white"><img src="https://img.shields.io/badge/AMAZONAWS-232F3E?style=for-the-badge&logo=AMAZONAWS&logoColor=white">
 
 ### 💡기능
 ls, cd, mkdir, cat, chmod, chown, grep, find, rm, cp
